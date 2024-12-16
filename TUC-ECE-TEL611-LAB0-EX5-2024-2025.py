@@ -57,3 +57,29 @@ mean = np.mean(data)
 median = np.median(data)
 print(f"Mean: {mean}")
 print(f"Median: {median}")
+
+#Final Task: Create a Data Analysis Script
+#Import the necessary libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+# Example for input and data processing
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+city = input("Enter your city: ")
+# Create DataFrame from user input
+data = {'Name': [name], 'Age': [age], 'City': [city]}
+df = pd.DataFrame(data)
+# Print DataFrame
+print("\nYour DataFrame:")
+print(df)
+# Example of using NumPy array
+numbers = np.array([10, 20, 30, 40])
+print("\nSum of numbers:", np.sum(numbers))
+# Visualize data
+plt.plot(numbers)
+plt.title('Numbers Plot')
+plt.show()
+# Basic statistical analysis
+mean = np.mean(numbers)
+print("\nMean of numbers:", mean)
