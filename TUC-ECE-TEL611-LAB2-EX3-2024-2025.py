@@ -1,31 +1,45 @@
-# Import necessary libraries
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
-# Step 1: Load the Iris dataset
-iris = datasets.load_iris()
-X = iris.data  # Features (sepal length, sepal width, petal length, petal width)
-y = iris.target  # Classes (Iris Setosa, Versicolor, Virginica)
-# Step 2: Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-# Step 3: Initialize the Gaussian Naive Bayes classifier
-gnb = GaussianNB()
-# Step 4: Train the classifier
-gnb.fit(X_train, y_train)
-# Step 5: Make predictions on the test set
-y_pred = gnb.predict(X_test)
-# Step 6: Evaluate the classifier's performance
-accuracy = accuracy_score(y_test, y_pred)
-cm = confusion_matrix(y_test, y_pred)
-# Print accuracy
-print(f'Accuracy of the Gaussian Naive Bayes classifier: {accuracy:.2f}')
-# Step 7: Plot the confusion matrix
-disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=iris.target_names)
-disp.plot(cmap=plt.cm.Blues)
-plt.title('Confusion Matrix for Iris Dataset')
+from scipy.stats import norm
+
+# Parameters
+mu1, sigma1 = 2, 1  # Class ω1 (Spam)
+mu2, sigma2 = 4, 1  # Class ω2 (Not Spam)
+P_w1, P_w2 = 0.4, 0.6  # Priors
+lambda_21 = 5  # Cost of classifying Spam as Not Spam
+lambda_12 = 1  # Cost of classifying Not Spam as Spam
+
+# Step 1: Define the likelihoods
+x = np.linspace(-2, 8, 1000)
+p_x_w1 = norm.pdf(x, mu1, sigma1)  # p(x | ω1)
+p_x_w2 = norm.pdf(x, mu2, sigma2)  # p(x | ω2)
+
+# Step 2: Compute the posterior probabilities
+p_x = p_x_w1 * P_w1 + p_x_w2 * P_w2  # Total evidence
+P_w1_x = (p_x_w1 * P_w1) / p_x  # Posterior P(ω1 | x)
+P_w2_x = (p_x_w2 * P_w2) / p_x  # Posterior P(ω2 | x)
+
+# Step 3: Decision rule - Minimize Average Risk
+# Compute the risk for each class
+risk_w1 = lambda_21 * P_w1_x  # Risk for classifying as ω1
+risk_w2 = lambda_12 * P_w2_x  # Risk for classifying as ω2
+
+# Decision boundary: Compare risks
+decision = np.where(risk_w1 < risk_w2, 1, 2)
+
+# Step 4: Plot the results
+plt.figure(figsize=(10, 6))
+plt.plot(x, risk_w1, label="Risk for Spam (ω1)", color='red')
+plt.plot(x, risk_w2, label="Risk for Not Spam (ω2)", color='blue')
+plt.fill_between(x, 0, 1, where=decision == 1, color='red', alpha=0.1, label="Classified as Spam")
+plt.fill_between(x, 0, 1, where=decision == 2, color='blue', alpha=0.1, label="Classified as Not Spam")
+plt.title("Bayesian Decision Rule with Average Risk")
+plt.xlabel("Feature x (e.g., Word Frequency)")
+plt.ylabel("Risk")
+plt.legend()
+plt.grid()
 plt.show()
 
+# Step 5: Compute Average Risk
+average_risk = np.trapz(np.minimum(risk_w1, risk_w2), x)  # Integrate over x
+print(f"Average Risk: {average_risk:.4f}")
