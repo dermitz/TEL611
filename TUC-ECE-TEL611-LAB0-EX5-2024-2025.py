@@ -1,3 +1,40 @@
+"""
+File Name: basic_python_data_analysis.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script serves as an introduction to Python programming for data analysis. It demonstrates various fundamental programming concepts, including data types, control structures, and the use of Python libraries such as NumPy, Pandas, and Matplotlib for performing basic data analysis and visualization tasks.
+
+Key Components:
+    1. **Data Types and Control Structures**: Examples of working with different data types (integers, floats, strings, booleans) and control structures (if-else conditions, for loops).
+    2. **NumPy Arrays**: Basic creation and manipulation of NumPy arrays, performing mathematical operations on arrays, and visualizing data.
+    3. **Pandas DataFrames**: Creating simple DataFrames, performing basic statistical analysis, and working with sample data.
+    4. **Matplotlib Visualization**: Plotting basic graphs (e.g., sine wave, bar plot) and visualizing user input data.
+    5. **User Interaction**: Collecting user input, creating a DataFrame from user-provided data, and performing basic analysis and visualization on the entered data.
+
+Usage:
+    - This script provides an interactive way to learn Python programming and perform simple data analysis.
+    - The user is prompted to input their personal information, and then basic operations are performed on a data set that includes this input, along with some statistical analysis and visualization.
+
+Dependencies:
+    - numpy
+    - pandas
+    - matplotlib
+    - scipy
+
+Instructions:
+    - Run the script in a Python environment.
+    - Input your name, age, and city when prompted.
+    - The script will perform basic data analysis and show results such as the sum of numbers, mean, and a simple plot.
+
+Notes:
+    - The script is designed to be a hands-on exercise to introduce the basic concepts of Python programming and data analysis.
+    - It provides a foundation for more advanced data analysis tasks, such as working with larger data sets and performing more complex visualizations and analyses.
+
+"""
+
 #Step 1: Install and Import Libraries
 # Import the necessary libraries
 import numpy as np
