@@ -1,3 +1,49 @@
+"""
+File Name: linear_discriminant_analysis_2d.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script implements a Linear Discriminant Analysis (LDA) classifier for a synthetic 2D dataset with two classes. 
+    The data is generated from two multivariate normal distributions with different means and covariance matrices. 
+    The script computes the LDA parameters, applies the classifier, and visualizes the decision boundary that separates the two classes.
+
+    Key Components:
+    - Data Generation: The script generates two classes of synthetic data using multivariate normal distributions. 
+      Each class has different mean vectors and covariance matrices.
+    - LDA Parameter Computation: The script calculates the means, covariance matrices, and computes the weight vector 
+      and bias term for the Linear Discriminant Function.
+    - Discriminant Function: The script defines the linear discriminant function that is used to classify data points 
+      based on the computed weights and bias.
+    - Classification: The script classifies data points by applying the discriminant function, and calculates the 
+      classification accuracy.
+    - Decision Boundary Visualization: The script visualizes the decision boundary by generating a mesh grid of points 
+      and computing the decision value for each point. The resulting decision boundary is then plotted along with the 
+      data points.
+    - Accuracy Evaluation: The script computes and prints the accuracy of the classifier by comparing predicted and 
+      actual class labels.
+
+Usage:
+    - This script demonstrates how to perform binary classification using Linear Discriminant Analysis (LDA) for 2D 
+      feature spaces. It generates synthetic data, calculates the LDA parameters, and visualizes the decision boundary 
+      separating the two classes.
+    - The script can be adapted for more complex datasets with higher-dimensional feature spaces.
+
+Dependencies:
+    - numpy
+    - matplotlib
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, matplotlib) are installed in your Python environment.
+    - Run the script to generate the synthetic dataset, compute the LDA parameters, classify the data points, 
+      visualize the decision boundary, and compute the classification accuracy.
+
+Notes:
+    - This implementation assumes that both classes share the same covariance matrix (homoscedasticity).
+    - The script generates a decision boundary in a 2D feature space, and can be extended for higher-dimensional spaces.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
