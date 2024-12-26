@@ -1,3 +1,39 @@
+"""
+File Name: perceptron_random_data.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates the implementation of the Perceptron algorithm for binary classification using randomly 
+    generated 2D data. The labels are based on a simple linear rule where the sum of the two features determines the 
+    class. The Perceptron is trained on the data, and the final weights and bias are displayed. A plot is generated 
+    to show the decision boundary learned by the Perceptron, along with the data points from both classes.
+
+    Key Components:
+    - Data Generation: Random 2D points are generated, and labels are assigned based on whether the sum of the two 
+      features is greater than 1.
+    - Perceptron Training: The Perceptron algorithm is implemented manually, where weights and bias are updated during 
+      training to classify the data points correctly.
+    - Decision Boundary: The learned decision boundary is plotted alongside the data points, allowing visualization of 
+      the classifier's decision-making process.
+    - Visualization: The script generates a plot that displays the training data points, decision boundary, and axes.
+
+Usage:
+    - This script is useful for understanding the Perceptron algorithm in the context of simple binary classification.
+    - It shows the process of training a linear classifier on random data and visualizing the decision boundary.
+
+Dependencies:
+    - numpy
+    - matplotlib
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, matplotlib) are installed in your Python environment.
+    - Run the script to train the Perceptron model on the random dataset and visualize the decision boundary.
+    - The final weights and bias will be printed in the console, and a plot will be displayed showing the data points 
+      and the decision boundary.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
