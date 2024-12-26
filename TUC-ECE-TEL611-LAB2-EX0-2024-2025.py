@@ -1,3 +1,43 @@
+"""
+File Name: probability_and_entropy_analysis.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script performs probability analysis based on a scenario involving students' participation in sports and their performance in mathematics.
+    The analysis includes marginal, joint, and conditional probabilities, as well as verification using the sum and product rules, and Bayes' theorem.
+    Additionally, it calculates the entropy of the sports participation variable.
+
+Key Components:
+    1. Marginal Probabilities: Computes the probability of individual events (e.g., the probability of a student playing sports, excelling in math).
+    2. Joint Probability: Calculates the probability of two events occurring together (e.g., the probability of a student both playing sports and excelling in math).
+    3. Conditional Probabilities: Calculates the probability of one event given the occurrence of another (e.g., the probability of excelling in math given that a student plays sports).
+    4. Sum Rule: Verifies the marginal probability of excelling in math by summing the joint probabilities.
+    5. Product Rule: Verifies the joint probability using the product of marginal and conditional probabilities.
+    6. Bayes' Theorem: Uses Bayes' theorem to calculate the conditional probability of a student playing sports given that they excel in math.
+    7. Entropy Calculation: Computes the entropy of sports participation, which measures the uncertainty in this variable.
+
+Usage:
+    - This script provides an example of probability calculations in a real-world scenario and can be applied to understanding relationships between different events.
+    - The entropy calculation measures the uncertainty of sports participation in the student population.
+    - The script is useful for practicing conditional probabilities, sum/product rules, and Bayes' theorem.
+
+Dependencies:
+    - numpy
+    - math
+
+Instructions:
+    - Run the script to see the computed probabilities, including marginal, joint, and conditional probabilities.
+    - Verify these probabilities using the sum and product rules, as well as Bayes' theorem.
+    - The script will also calculate the entropy of the sports participation variable.
+
+Notes:
+    - The sample data used in this script represents a scenario where 200 students are surveyed, with information on their participation in sports and their performance in math.
+    - The entropy calculation assumes a discrete probability distribution for sports participation.
+
+"""
+
 import numpy as np
 
 # Sample data (frequency counts from the problem scenario)
