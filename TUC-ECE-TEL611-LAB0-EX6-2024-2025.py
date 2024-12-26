@@ -1,3 +1,48 @@
+"""
+File Name: california_housing_linear_regression.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script implements a linear regression analysis on the California Housing dataset.
+    The goal is to predict the median house value based on the median income using a simple linear regression model.
+    It also demonstrates basic data exploration techniques, including dataset inspection, handling missing values, and visualizing the relationship between features.
+
+Key Components:
+    1. **Data Loading**: The California Housing dataset is loaded using `fetch_california_housing` from scikit-learn, which provides a dataframe containing housing features and target labels.
+    2. **Data Inspection**: The dataset is inspected to identify missing values and get a statistical summary.
+    3. **Data Visualization**: A scatter plot is generated to visualize the relationship between median income (MedInc) and median house value (MedHouseVal). A regression line is also plotted to visualize the model's predictions.
+    4. **Correlation Analysis**: The correlation matrix is computed to understand the relationships between features and the target variable.
+    5. **Model Training**: A simple linear regression model is trained using the median income feature to predict the median house value. The model's performance is evaluated using mean squared error (MSE).
+    6. **Model Evaluation**: The model's accuracy is assessed based on the MSE, and the regression line is visualized against the actual data points.
+
+Usage:
+    - This script is designed to guide students through the process of exploring a dataset, performing linear regression, and evaluating the model's performance.
+    - It provides insights into the relationship between economic factors (like median income) and housing prices.
+
+Dependencies:
+    - pandas
+    - matplotlib
+    - scikit-learn
+
+Instructions:
+    - Run the script to load the California Housing dataset, inspect and visualize the data, and train a linear regression model.
+    - Update the dataset path if necessary and execute the script in an appropriate Python environment with the required libraries.
+
+Notes:
+    - This example uses median income as the single feature for prediction. More sophisticated models can be built by including additional features.
+    - The mean squared error is used as a measure of the model's accuracy. Lower MSE indicates a better fit of the model to the data.
+    - The correlation analysis helps identify which features have the strongest relationship with the target variable.
+
+Questions for Students:
+    1. Why is it important to explore and visualize data before building a model?
+    2. What does the correlation matrix tell you about the relationship between the features and the target variable?
+    3. Why might the linear regression model not perform well with only one feature?
+    4. How would you improve the model by incorporating more features?
+    5. What other evaluation metrics could you use to assess the performance of your regression model?
+"""
+
 # Import necessary libraries
 from sklearn.datasets import fetch_california_housing
 import pandas as pd
