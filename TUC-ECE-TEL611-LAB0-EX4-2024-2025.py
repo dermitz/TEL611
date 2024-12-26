@@ -1,3 +1,38 @@
+"""
+File Name: titanic_data_analysis.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script performs basic data analysis and visualization on the Titanic dataset. It loads the dataset, handles missing values, performs group-based analysis, and visualizes survival rates by gender. The goal is to provide an example of how to work with real-world datasets using Pandas and Matplotlib.
+
+Key Components:
+    1. **Data Loading**: The Titanic dataset is loaded from a remote URL using Pandas.
+    2. **Handling Missing Data**: Missing values in the 'Age' column are filled with the median of the column.
+    3. **Group-based Analysis**: The survival rate is analyzed based on the passenger class and gender.
+    4. **Data Visualization**: The survival rates by gender are visualized using a bar plot with Matplotlib.
+    
+Usage:
+    - Run the script in a Python environment to perform basic data analysis on the Titanic dataset.
+    - The script will load the dataset, handle missing values, compute survival rates, and display a bar chart of survival rates by gender.
+
+Dependencies:
+    - pandas
+    - matplotlib
+
+Instructions:
+    - Run the script in a Python environment.
+    - The Titanic dataset will be fetched from the provided URL.
+    - The script will output the first few rows of the dataset, missing value statistics, survival rates by class, and a bar plot of survival rates by gender.
+
+Notes:
+    - This script is a demonstration of basic data preprocessing and visualization techniques using real-world data.
+    - The dataset contains information about passengers aboard the Titanic, including whether they survived, their age, gender, passenger class, and more.
+
+
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 # Load the Titanic dataset
