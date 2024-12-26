@@ -1,3 +1,42 @@
+"""
+File Name: xor_mlp_classifier.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script implements a solution for the XOR problem using a Multi-layer Perceptron (MLP) classifier. The XOR 
+    problem is a classic binary classification problem where the output is 1 when either of the two inputs is 1, 
+    but not both. The script utilizes an MLP neural network with one hidden layer and ReLU activation to model 
+    the XOR logic function. 
+
+    Key components:
+    - Dataset: A small binary classification dataset representing the XOR problem, with two binary inputs and 
+      a binary output.
+    - MLPClassifier: A neural network classifier used to approximate the XOR function. It uses one hidden layer 
+      with three neurons and ReLU activation.
+    - Evaluation: The model is trained on the XOR dataset, and its performance is evaluated using the accuracy score.
+    - Visualization: The input data and the decision boundary are visualized using a scatter plot.
+
+Usage:
+    - This script is designed to solve the XOR problem using a neural network model.
+    - The XOR problem is used as a simple example to showcase the capabilities of multi-layer neural networks in 
+      solving non-linear problems.
+    - The script visualizes the XOR data, trains the MLP model, and prints the accuracy and predicted results for each input.
+
+Dependencies:
+    - numpy
+    - matplotlib
+    - sklearn
+
+Instructions:
+    - Ensure that NumPy, scikit-learn, and Matplotlib are installed in your Python environment.
+    - Run the script to train the MLP model on the XOR dataset.
+    - The script will output the model's accuracy and display the input-output mapping for each test case.
+    - A scatter plot will be generated, showing the XOR data and indicating the class labels with different colors.
+
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.neural_network import MLPClassifier
