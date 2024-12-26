@@ -1,3 +1,43 @@
+"""
+File Name: house_price_prediction_with_visualization.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script generates a synthetic dataset simulating the relationship between house size, number of 
+    bedrooms, age of the house, and its price. A linear regression model is then trained to predict the 
+    price based on these features. The model's performance is evaluated using Mean Squared Error (MSE), and 
+    relationships between the features and the price are visualized.
+
+    Key Components:
+    - Dataset Generation: The dataset is created with random values for three features (Size, Bedrooms, Age) 
+      and a price variable determined by a linear function of these features.
+    - Linear Regression Model: The `LinearRegression` class from scikit-learn is used to train the model on the 
+      generated dataset.
+    - Evaluation: The model's performance is evaluated using Mean Squared Error (MSE) to assess prediction accuracy.
+    - Visualization: Scatter plots are generated to show how the model's predictions compare to the actual prices 
+      based on each feature (Size, Bedrooms, Age).
+
+Usage:
+    - This script can be used to analyze the relationship between house features and their price using linear 
+      regression.
+    - It generates a synthetic dataset, fits a linear regression model, and visualizes the results.
+    
+Dependencies:
+    - numpy
+    - pandas
+    - scikit-learn
+    - matplotlib
+    
+Instructions:
+    - Ensure that the required dependencies (NumPy, pandas, scikit-learn, matplotlib) are installed in your 
+      Python environment.
+    - Run the script to train the model on the synthetic dataset and evaluate its performance.
+    - The results will be printed in the console, and visualizations will be shown as scatter plots.
+
+"""
+
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
