@@ -1,4 +1,4 @@
-# Reimport necessary libraries after reset
+# Sigmoid Neuron implementation
 import numpy as np
 
 # Sigmoid function
