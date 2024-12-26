@@ -1,3 +1,37 @@
+"""
+File Name: neural_network_activation_functions.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script implements various neural network activation functions using NumPy and visualizes the output using Matplotlib.
+    The following neurons are implemented with an adjustable threshold:
+    - Linear Threshold Neuron: A simple neuron that outputs 1 if the sum of inputs exceeds the threshold.
+    - ReLU Neuron: A variant of the linear threshold neuron that outputs 1 if the sum exceeds the threshold, similar to the ReLU activation function.
+    - Sigmoid Neuron: A probabilistic neuron that uses the sigmoid function to determine the output, with a threshold for classification.
+    - Tanh Neuron: A neuron that applies the hyperbolic tangent function and outputs 1 if the result exceeds a set threshold.
+    - Stochastic Neuron: A neuron that uses the sigmoid function to compute a probability and outputs 1 if it exceeds the threshold.
+
+    The neurons are trained and evaluated on a simple AND operation dataset with four input-output pairs. The predictions of each neuron are displayed after training over multiple epochs. Results are visualized to show how each neuron behaves.
+
+Usage:
+    - This script demonstrates how different activation functions perform on a simple binary classification task (AND operation).
+    - It compares five neuron types: Linear Threshold, ReLU, Sigmoid, Tanh, and Stochastic, and shows their output after a set number of epochs.
+    - The results of each neuron type are plotted to visualize how they respond to the inputs.
+
+Dependencies:
+    - numpy
+    - matplotlib
+
+Instructions:
+    - Ensure that NumPy and Matplotlib are installed in your Python environment.
+    - Run the script to train and evaluate the neurons over 10 epochs.
+    - Observe the final predictions for each neuron and analyze their behavior on the AND operation.
+    - The plot at the end will show the output of each neuron after the final epoch.
+
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
