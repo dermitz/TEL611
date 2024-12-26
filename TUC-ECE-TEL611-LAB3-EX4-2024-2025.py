@@ -1,3 +1,44 @@
+"""
+File Name: svm_multiclass_classification.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates the use of Support Vector Machines (SVM) for multi-class classification using a synthetic 
+    dataset consisting of three classes. The dataset is generated using multivariate normal distributions with different 
+    means and covariances. The SVM is trained using both a linear kernel and a Radial Basis Function (RBF) kernel. 
+    The accuracy of the model is evaluated and visualized for both kernel types, with decision boundaries plotted for 
+    both cases.
+
+    Key Components:
+    - Data Generation: The script generates a synthetic dataset with three classes, each represented by points drawn 
+      from a multivariate normal distribution with different means and covariances.
+    - Linear SVM: The first model trained is an SVM with a linear kernel. This model is used to classify the data, and 
+      the accuracy is printed. The decision boundary for this model is visualized.
+    - RBF SVM: The second model trained is an SVM with a Radial Basis Function (RBF) kernel, which is used to classify 
+      the data, and the accuracy is printed. The decision boundary for this model is also visualized.
+    - Visualization: The script generates scatter plots of the dataset, decision boundaries for both SVM kernels, and 
+      accuracy scores for each model.
+
+Usage:
+    - This script is useful for demonstrating the effectiveness of different SVM kernels (linear vs. RBF) for multi-class 
+      classification.
+    - It shows how to train and evaluate SVM models and visualize decision boundaries for both linear and non-linear 
+      classification problems.
+
+Dependencies:
+    - numpy
+    - matplotlib
+    - scikit-learn
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, matplotlib, scikit-learn) are installed in your Python environment.
+    - Run the script to generate the synthetic dataset, train the SVM models with linear and RBF kernels, and visualize 
+      the results.
+    - The script will display the dataset, decision boundaries, and print the accuracy of both models.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.svm import SVC
