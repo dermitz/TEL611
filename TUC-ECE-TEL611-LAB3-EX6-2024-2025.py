@@ -1,3 +1,42 @@
+"""
+File Name: perceptron_iris_classification.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates the implementation of a Perceptron algorithm for binary classification using the 
+    Iris dataset. The dataset is preprocessed by selecting two features and standardizing the data. The Perceptron 
+    model is trained using the training set and tested on a separate test set. The accuracy of the model is evaluated 
+    and printed. A visualization of the decision boundary is generated, showing the classification of the two Iris 
+    species ('Setosa' and 'Versicolor').
+
+    Key Components:
+    - Dataset: The Iris dataset is loaded, with only the first two features and the first 150 samples (Setosa and 
+      Versicolor classes) used for training and testing.
+    - Preprocessing: The features are standardized using `StandardScaler` from scikit-learn.
+    - Perceptron Training: The Perceptron algorithm is implemented manually to learn the decision boundary for classifying 
+      the two Iris species.
+    - Model Evaluation: The model's accuracy is computed based on its predictions on the test data.
+    - Visualization: A scatter plot is created showing the training samples, and the decision boundary is plotted to 
+      visualize the model's classification.
+
+Usage:
+    - This script can be used to demonstrate the Perceptron algorithm for binary classification, including model training, 
+      evaluation, and visualization.
+    - It is particularly useful for understanding the process of training a linear classifier and how it can be visualized.
+
+Dependencies:
+    - numpy
+    - scikit-learn
+    - matplotlib
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, scikit-learn, matplotlib) are installed in your Python environment.
+    - Run the script to train the Perceptron model on the Iris dataset and evaluate its performance.
+    - The accuracy of the model will be printed in the console, and a plot of the decision boundary will be displayed.
+"""
+
 import numpy as np
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
