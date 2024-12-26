@@ -1,3 +1,36 @@
+"""
+File Name: limitation_of_lse_with_non_linear_data.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates the limitation of Least Squares Estimation (LSE) when applied to non-linear data.
+    A synthetic dataset with a cubic relationship between the input variable `x` and target variable `y` is 
+    generated, with added noise. The script applies a linear regression model (using LSE) to the non-linear data,
+    illustrating how the model fails to capture the true non-linear relationship. The results are visualized by 
+    plotting the non-linear data and the linear fit.
+
+    Key Components:
+    - Dataset Generation: Synthetic data is generated with a cubic relationship `y = 3 * x^3 - 3 * x + 5` plus random noise.
+    - Linear Regression: The script uses Least Squares Estimation (LSE) to fit a linear model to the non-linear data.
+    - Model Visualization: A scatter plot is generated showing both the actual non-linear data and the linear fit, highlighting 
+      the limitations of the linear model.
+    
+Usage:
+    - This script can be used to demonstrate the limitations of linear regression (LSE) when applied to non-linear data.
+    - The script generates synthetic data, fits a linear regression model, and visualizes the results.
+
+Dependencies:
+    - numpy
+    - matplotlib
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, matplotlib) are installed in your Python environment.
+    - Run the script to observe how LSE fails to model non-linear data accurately.
+    - The results will be plotted, showing the non-linear data and the linear fit.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
