@@ -1,3 +1,37 @@
+"""
+File Name: neural_network_activation_functions.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script implements various activation functions used in neural networks for binary classification tasks.
+    The script defines and evaluates the following neurons:
+    - Linear Threshold Neuron: A simple neuron that applies a threshold to the weighted sum of inputs.
+    - ReLU Neuron: A Rectified Linear Unit that outputs 0 for negative inputs and the input itself for positive values.
+    - Sigmoid Neuron: A neuron that outputs values between 0 and 1, often used for probabilistic classification.
+    - Tanh Neuron: A hyperbolic tangent neuron that outputs values between -1 and 1.
+    - Stochastic Neuron: A probabilistic neuron that uses the sigmoid function to compute the probability of firing.
+
+    The neurons are trained and evaluated over multiple epochs on an AND logic operation dataset, and their performance is compared.
+
+Usage:
+    - This script is intended for educational purposes to demonstrate the behavior of different neural network activation functions.
+    - It trains and evaluates each neuron on a simple AND operation with four input-output pairs and compares the results over 10 epochs.
+
+Dependencies:
+    - numpy
+    - tensorflow
+
+Instructions:
+    - Ensure you have TensorFlow and NumPy installed.
+    - Run the script to evaluate the performance of each neuron type over 10 epochs.
+    - Observe and compare the predictions for each activation function.
+
+"""
+
+
+
 import numpy as np
 import tensorflow as tf
 
