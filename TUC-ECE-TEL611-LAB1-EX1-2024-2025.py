@@ -1,13 +1,44 @@
-# Exercise: PCA with Randomly Generated Data
+"""
+File Name: pca_data_analysis.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
 
-# Objective:
-# Perform PCA on randomly generated data to understand dimensionality reduction and feature extraction.
+Description:
+    This script demonstrates the application of Principal Component Analysis (PCA) to a randomly generated dataset.
+    PCA is a dimensionality reduction technique that transforms data into a new coordinate system defined by the directions of maximum variance (principal components).
+    This script reduces the dimensionality of a 3-dimensional dataset to 2 dimensions for visualization and provides insights into the explained variance.
 
-# Instructions:
-# 1. Generate a random dataset with 3 features and 300 samples.
-# 2. Standardize the dataset.
-# 3. Perform PCA and reduce the dataset to 2 principal components.
-# 4. Visualize the results using a scatter plot.
+Key Components:
+    1. Data Generation: A synthetic dataset of 300 samples with 3 features is generated using random values with different standard deviations and means.
+    2. Data Preprocessing: The dataset is standardized using `StandardScaler` to ensure that each feature has a mean of 0 and a standard deviation of 1.
+    3. PCA Application: PCA is applied to reduce the data from 3 features to 2 principal components for visualization.
+    4. Visualization: A scatter plot of the PCA-reduced data is created to help visualize the structure of the data in the new 2D space.
+    5. Variance Analysis: The explained variance ratio for each principal component is calculated to understand how much of the original variance is retained.
+
+Usage:
+    - The script is ideal for illustrating the power of PCA in dimensionality reduction.
+    - It is useful for students learning about feature reduction and the importance of standardizing data before applying PCA.
+
+Dependencies:
+    - numpy
+    - matplotlib
+    - sklearn
+
+Instructions:
+    - Run the script to generate the random data, apply PCA, and visualize the transformed data in a 2D scatter plot.
+    - The script will also display the explained variance ratio, helping you understand the effectiveness of the dimensionality reduction.
+
+Notes:
+    - PCA is sensitive to the scale of the data, which is why it is important to standardize the features before applying PCA.
+    - The explained variance ratio shows how much of the data's original variance is retained after applying PCA, which helps assess the quality of the dimensionality reduction.
+
+Questions for Students:
+    1. Why is it important to standardize the data before applying PCA?
+    2. What do the scatter plot and explained variance tell us about the structure of the data?
+    3. Try changing the random data generation parameters. How does it affect the PCA results?
+"""
+
 
 import numpy as np
 import matplotlib.pyplot as plt
