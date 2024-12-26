@@ -1,3 +1,49 @@
+"""
+File Name: bayesian_decision_with_risk.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates Bayesian decision-making in the presence of classification risks. 
+    It models the decision boundary between two classes (Spam and Not Spam) based on their prior probabilities 
+    and likelihoods, considering both the risk of misclassification and the effect of Gaussian noise on observed data.
+    
+    Key Components:
+    - Data Generation: The script uses two normal distributions to generate likelihoods for the two classes (Spam and Not Spam).
+    - Bayesian Decision Rule: The script calculates posterior probabilities and risks for each class, and then determines 
+      the decision boundary based on comparing these risks.
+    - Decision Boundary Visualization: The script plots the decision boundaries and the corresponding risks associated 
+      with classifying a point as Spam or Not Spam.
+    - Impact of Misclassification Costs: The script tests the impact of different misclassification costs (λ21 and λ12) 
+      on the decision boundary and risk.
+    - Gaussian Noise Impact: The script demonstrates the effect of Gaussian noise on the decision boundary and calculates 
+      the average risk for each scenario.
+
+Usage:
+    - This script provides an interactive visualization of how Bayesian decision-making operates in a binary classification 
+      context with risks involved. It allows exploration of how different misclassification costs and Gaussian noise 
+      levels impact the decision boundary and the average risk.
+    - The script can be adapted to other classification tasks by modifying the prior probabilities, means, 
+      and standard deviations of the normal distributions.
+
+Dependencies:
+    - numpy
+    - matplotlib
+    - scipy
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, matplotlib, scipy) are installed in your Python environment.
+    - Run the script to observe the impact of different costs and Gaussian noise on the decision boundary and average risk.
+    - The script will visualize the decision boundary and print the average risk for each scenario.
+
+Notes:
+    - The decision-making process is based on minimizing classification risks, which can be adjusted through 
+      the misclassification costs (λ21 and λ12).
+    - The script provides a clear visualization of the decision regions under various conditions, making it ideal for 
+      understanding Bayesian classification with risks.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
