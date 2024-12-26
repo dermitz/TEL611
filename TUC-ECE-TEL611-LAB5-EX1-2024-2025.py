@@ -1,4 +1,4 @@
-# Reinitialize environment for ReLU-based Perceptron Training
+# Initialize environment for ReLU-based Perceptron Training
 
 import numpy as np
 
