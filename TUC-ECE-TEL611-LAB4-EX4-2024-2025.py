@@ -1,3 +1,45 @@
+"""
+File Name: house_price_prediction.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script implements a simple linear regression model to predict house prices based on features such as
+    the size of the house, number of bedrooms, and age of the house. The dataset is synthetically generated 
+    using random values for these features and a linear relationship to determine the target variable (Price).
+
+    Key Components:
+    - Dataset Generation: Randomly generates a dataset with three input features (Size, Bedrooms, Age) and 
+      the corresponding target variable (Price). The price is modeled as a linear function of these features 
+      with some added noise.
+    - Linear Regression Model: Uses scikit-learn's `LinearRegression` to train the model on the dataset.
+    - Residuals Calculation: Computes the residuals (the differences between the actual and predicted prices) 
+      and calculates the standard deviation of these residuals to assess model performance.
+    - Prediction with Confidence Interval: Allows the user to input house features (size, number of bedrooms, 
+      and age) and predicts the house price along with a range (±1 standard deviation) indicating uncertainty 
+      in the prediction.
+    
+Usage:
+    - This script can be used to predict house prices for a given set of features.
+    - The user can enter the features for a house (size, number of bedrooms, and age) and the model will output 
+      the predicted price and its range.
+    
+Dependencies:
+    - numpy
+    - pandas
+    - scikit-learn
+    - matplotlib
+    
+Instructions:
+    - Ensure that the required dependencies (NumPy, pandas, scikit-learn, matplotlib) are installed in your 
+      Python environment.
+    - Run the script to train the model on a synthetic dataset and make predictions.
+    - When prompted, enter the size, number of bedrooms, and age of the house to receive the predicted price 
+      and its range.
+
+"""
+
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
