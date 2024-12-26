@@ -1,3 +1,43 @@
+"""
+File Name: loan_approval_mlp.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates the use of a Multi-layer Perceptron (MLP) classifier to predict loan approval decisions based 
+    on three features: Employment, Credit History, and Debt. The model uses the ReLU activation function in the hidden layers 
+    and evaluates the performance using accuracy score. The dataset includes binary outcomes (0 for not approved, 1 for approved), 
+    and the MLP is trained to classify whether at least two out of the three conditions (Employment, Credit History, Debt) 
+    are met for loan approval.
+
+    Key components:
+    - Dataset: A binary classification dataset representing loan approval based on three input features.
+    - MLPClassifier: A neural network classifier that uses multiple hidden layers and ReLU activation to model the relationship 
+      between input features and the loan approval decision.
+    - Evaluation: The model's accuracy is evaluated using the accuracy score from scikit-learn's metrics module.
+    - Visualization: The input data and predictions are visualized in a 3D scatter plot, with different colors representing true 
+      and predicted outcomes.
+
+Usage:
+    - This script can be used to predict loan approval decisions based on input features such as Employment, Credit History, 
+      and Debt.
+    - The MLPClassifier is trained on the dataset, and the model's performance is evaluated and printed.
+    - The true and predicted outcomes are plotted in a 3D space for visual inspection of the model's predictions.
+
+Dependencies:
+    - numpy
+    - sklearn
+    - matplotlib
+
+Instructions:
+    - Ensure that NumPy, scikit-learn, and Matplotlib are installed in your Python environment.
+    - Run the script to train the MLP model on the dataset.
+    - The script will output the accuracy score of the model, along with the true and predicted loan approval decisions.
+    - A 3D scatter plot will be displayed, showing both the true and predicted values for visual comparison.
+
+"""
+
 import numpy as np
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
