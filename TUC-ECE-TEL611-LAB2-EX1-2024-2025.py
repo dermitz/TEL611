@@ -1,3 +1,49 @@
+"""
+File Name: bivariate_normal_distribution_analysis.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script explores the properties and calculations of bivariate normal distributions, 
+    focusing on the relationship between two variables (X and Y), and their joint behavior.
+    The code covers the following tasks:
+
+    1. Plots the Probability Density Functions (PDFs) for two normally distributed variables, 
+       X (Group A) and Y (Group B), with specified means, standard deviations, and covariance.
+    2. Computes expectations (means), variances, covariance, and correlation for the two variables.
+    3. Calculates the joint probability that both variables exceed a threshold value (T).
+    4. Computes the entropy for each variable, their joint entropy, and mutual information between the two variables.
+
+Key Components:
+    - Normal Distribution: Assumes the distribution of both X and Y are normal, with the specified means and standard deviations.
+    - Covariance and Correlation: Measures the relationship between the two variables.
+    - Joint Probability: Calculates the probability that both X and Y are greater than a threshold T.
+    - Entropy and Mutual Information: Quantifies the uncertainty and the shared information between X and Y.
+
+Usage:
+    - This script provides a practical example of working with bivariate normal distributions and their related properties.
+    - It is useful for understanding how variables with joint distributions behave in probability, information theory, and data analysis.
+    - The script computes entropy values, mutual information, and joint probability, which are essential for tasks like feature selection and model evaluation in machine learning.
+
+Dependencies:
+    - numpy
+    - matplotlib
+    - scipy
+    - seaborn
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, Matplotlib, SciPy, Seaborn) are installed in your Python environment.
+    - Run the script to generate the plots for the PDFs of X and Y, calculate the necessary statistical properties, 
+      and print the results for the joint probability, entropy, and mutual information.
+    - The script will output the calculated expectations, variances, covariance, correlation, and mutual information.
+
+Notes:
+    - The script assumes X and Y are jointly normally distributed with the specified parameters.
+    - The entropy measures the uncertainty of a random variable, while mutual information quantifies the shared information between X and Y.
+    - The joint probability is calculated using the cumulative distribution function (CDF) of the bivariate normal distribution.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm, multivariate_normal
