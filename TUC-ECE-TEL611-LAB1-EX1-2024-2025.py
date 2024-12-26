@@ -82,8 +82,3 @@ plt.show()
 explained_variance = pca.explained_variance_ratio_
 print("\nExplained Variance Ratios:", explained_variance)
 print(f"Total Variance Explained: {explained_variance.sum() * 100:.2f}%")
-
-# Questions for Students:
-# 1. Why is it important to standardize the data before applying PCA?
-# 2. What do the scatter plot and explained variance tell us about the structure of the data?
-# 3. Try changing the random data generation parameters. How does it affect the PCA results?
