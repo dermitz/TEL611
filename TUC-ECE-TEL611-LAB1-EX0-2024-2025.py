@@ -1,3 +1,45 @@
+"""
+File Name: pca_iris_analysis.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script applies Principal Component Analysis (PCA) to the Iris dataset for dimensionality reduction.
+    PCA is used to reduce the four-dimensional feature space (sepal length, sepal width, petal length, and petal width) of the Iris dataset to two dimensions for visualization. 
+    The script also evaluates the explained variance of the principal components.
+
+Key Components:
+    1. Data Loading: The Iris dataset is loaded, which consists of 150 samples with four features.
+    2. Data Normalization: The features are scaled using `StandardScaler` to have a mean of 0 and a standard deviation of 1.
+    3. PCA Application: PCA is applied to reduce the dimensionality of the dataset from 4 to 2 principal components.
+    4. Visualization: A scatter plot is created to visualize the dataset in the reduced 2D space, with color-coding based on the class labels.
+    5. Explained Variance Analysis: The variance explained by each principal component is printed to assess the amount of information retained after reduction.
+
+Usage:
+    - This script is useful for students and practitioners learning about PCA and its application to real-world datasets.
+    - It demonstrates how PCA can reduce the dimensionality of data while retaining important information.
+
+Dependencies:
+    - numpy
+    - pandas
+    - matplotlib
+    - sklearn
+
+Instructions:
+    - Run the script to load the Iris dataset, standardize the features, apply PCA, and visualize the results in a 2D scatter plot.
+    - The script will also print the explained variance ratio, helping you assess the effectiveness of PCA.
+
+Notes:
+    - PCA is sensitive to the scale of the data, which is why feature scaling is an important preprocessing step.
+    - The explained variance ratio indicates how much of the original data's variance is retained in each principal component.
+
+Questions for Students:
+    1. What is the importance of standardizing the features before applying PCA?
+    2. How does PCA help in visualizing high-dimensional data?
+    3. What do the explained variance ratios tell us about the principal components in the dataset?
+"""
+
 # Importing necessary libraries
 import numpy as np
 import pandas as pd
