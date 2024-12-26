@@ -1,3 +1,43 @@
+"""
+File Name: least_squares_regression.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates the use of the Least Squares method to perform linear regression on a synthetic dataset. 
+    The dataset is generated with a linear relationship between the variables 'x' and 'y' (i.e., y = 3x + 7), with added 
+    Gaussian noise. The script calculates the coefficients of the regression line using the Least Squares method, 
+    predicts the values based on the model, visualizes the data and the fitted line, and computes the Residual Sum of Squares (RSS).
+
+    Key Components:
+    - Data Generation: The script generates synthetic data points where 'y' is linearly related to 'x' with added Gaussian noise.
+    - Least Squares Solution: The script calculates the coefficients (β₀ and β₁) of the regression line using the 
+      Least Squares method. It computes these values based on the mean of 'x' and 'y' and their covariance.
+    - Model Prediction: After calculating the regression coefficients, the script predicts the 'y' values for the dataset 
+      using the fitted line.
+    - Visualization: The script visualizes the original data points and the regression line using a scatter plot and a line plot.
+    - Residual Sum of Squares (RSS): The script calculates the RSS to evaluate the goodness of fit of the regression model.
+
+Usage:
+    - This script is useful for demonstrating how the Least Squares method works for simple linear regression.
+    - It shows how to compute the coefficients of a linear model, how to use it for prediction, and how to evaluate the model 
+      using the RSS.
+
+Dependencies:
+    - numpy
+    - matplotlib
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, matplotlib) are installed in your Python environment.
+    - Run the script to generate the synthetic dataset, fit a linear regression model, and visualize the results.
+    - The script will display the dataset, the fitted regression line, and the RSS of the model.
+
+Notes:
+    - This script assumes that the data is linearly related and the relationship between 'x' and 'y' can be modeled 
+      using a simple linear equation.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
