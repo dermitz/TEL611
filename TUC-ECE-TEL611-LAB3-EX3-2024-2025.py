@@ -1,3 +1,44 @@
+"""
+File Name: svm_linear_classification.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates the use of a Support Vector Machine (SVM) with a linear kernel for binary classification in 
+    a two-dimensional space. The dataset consists of two classes, which are generated using multivariate normal 
+    distributions with different means and covariance matrices. The SVM model is trained to classify the two classes, 
+    and the decision boundary (the optimal hyperplane) is visualized along with the data points.
+
+    Key Components:
+    - Data Generation: The script generates two classes of data points in 2D space, with each class having 50 samples. 
+      The data points are drawn from a multivariate normal distribution with different means and covariance matrices.
+    - SVM Model: A Support Vector Machine with a linear kernel is used to classify the data. The model is trained on the 
+      generated dataset.
+    - Decision Boundary: After training the SVM model, the decision boundary (the hyperplane separating the two classes) 
+      is computed using the model's coefficients. The decision boundary is then plotted alongside the data points.
+    - Visualization: The script generates a scatter plot to visualize the two classes and the decision boundary, highlighting 
+      the optimal linear discriminant function learned by the SVM.
+
+Usage:
+    - This script is useful for demonstrating how SVM can be applied to a simple binary classification task in a 2D space.
+    - It shows how to visualize the decision boundary of a linear SVM and how to use it for separating two classes.
+
+Dependencies:
+    - numpy
+    - matplotlib
+    - scikit-learn
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, matplotlib, scikit-learn) are installed in your Python environment.
+    - Run the script to generate the synthetic dataset, train the linear SVM model, and visualize the results.
+    - The script will display the dataset, the decision boundary, and provide an optimal separating hyperplane for classification.
+
+Notes:
+    - This script demonstrates the case where classes are linearly separable, which allows the SVM to learn a simple 
+      linear boundary.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.svm import SVC
