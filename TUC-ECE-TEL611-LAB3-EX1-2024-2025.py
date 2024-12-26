@@ -1,3 +1,45 @@
+"""
+File Name: linear_discriminant_analysis.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates the implementation of Linear Discriminant Analysis (LDA) for a synthetic dataset with 
+    three classes. The script generates data from three different multivariate normal distributions, each representing 
+    a class. The LDA approach involves calculating class statistics (means, covariance), defining the discriminant 
+    function, classifying data points, and visualizing the decision regions for classification.
+
+    Key Components:
+    - Data Generation: The script generates three classes of synthetic data points using multivariate normal distributions 
+      with different means and a shared covariance matrix.
+    - Class Statistics: The script computes the means, shared covariance matrix, and inverse of the covariance matrix. 
+      It also assumes equal priors for all classes.
+    - Discriminant Function: The script defines the discriminant function for classifying data points based on the LDA model.
+    - Classification: The script classifies all data points by evaluating the discriminant functions for each class and 
+      assigning the class with the highest score.
+    - Decision Region Visualization: The script visualizes the decision regions in the feature space and shows how the 
+      classifier distinguishes between the different classes.
+    - Accuracy Evaluation: The script calculates and prints the accuracy of the model by comparing predicted and actual class labels.
+
+Usage:
+    - This script demonstrates how to implement Linear Discriminant Analysis for multi-class classification problems.
+    - It shows the process of calculating the decision boundaries and evaluating the classifier's performance on a synthetic dataset.
+
+Dependencies:
+    - numpy
+    - matplotlib
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, matplotlib) are installed in your Python environment.
+    - Run the script to generate the synthetic dataset, classify the data points using LDA, visualize the decision boundaries, 
+      and compute the accuracy of the model.
+
+Notes:
+    - This implementation assumes that the classes follow Gaussian distributions with a shared covariance matrix.
+    - The script visualizes the decision boundaries for a 2D feature space and can be extended for higher dimensions.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
