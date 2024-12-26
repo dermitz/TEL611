@@ -1,3 +1,47 @@
+"""
+File Name: multiple_linear_regression_3d_visualization.py
+Author: Dr. Dermitzakis Emm. Eleftherios
+Date: 2024-12-26
+Version: 1.0
+
+Description:
+    This script demonstrates the application of multiple linear regression using a synthetic dataset with two 
+    features (`x1` and `x2`) to predict a target variable (`y`). The target variable is generated using a 
+    known linear relationship with the features. The model is trained using scikit-learn's `LinearRegression` class, 
+    and the results are evaluated using Mean Squared Error (MSE). Finally, the script provides a 3D visualization of 
+    both the actual data and the predictions.
+
+    Key Components:
+    - Dataset Generation: Synthetic data is generated for two features, `x1` and `x2`, and a target variable `y`. 
+      The relationship between `x1`, `x2`, and `y` is defined as `y = 3 * x1 + 2 * x2 + 5 + epsilon`, 
+      where `epsilon` is a random noise term.
+    - Multiple Linear Regression: The script uses scikit-learn's `LinearRegression` model to train on the data 
+      and predict the target variable `y`.
+    - Model Evaluation: The Mean Squared Error (MSE) is calculated to assess the accuracy of the model's predictions.
+    - 3D Visualization: A 3D scatter plot is created to compare the actual data points and the predicted values 
+      for the target variable `y`.
+
+Usage:
+    - This script can be used to demonstrate multiple linear regression with two features and visualize the 
+      model's predictions in a 3D plot.
+    - The script generates synthetic data, fits the model, evaluates its performance, and visualizes the results.
+
+Dependencies:
+    - numpy
+    - pandas
+    - scikit-learn
+    - matplotlib
+
+Instructions:
+    - Ensure that the required dependencies (NumPy, pandas, scikit-learn, matplotlib) are installed in your 
+      Python environment.
+    - Run the script to train the multiple linear regression model on the synthetic dataset and evaluate its 
+      performance.
+    - The results will be printed in the console, and a 3D visualization will be shown comparing the actual and 
+      predicted values.
+
+"""
+
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
