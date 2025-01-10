@@ -36,5 +36,6 @@ Welcome to the Python for Statistical Modeling & Pattern Recognition repository.
 
 ## License
 This project is licensed under the [GNU General Public License v3.0](LICENSE).
-**Contact**
+
+## Contact
 For any questions or suggestions, please contact the course instructor or open an issue in the repository.
