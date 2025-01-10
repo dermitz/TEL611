@@ -1,4 +1,4 @@
-**Python for Statistical Modeling & Pattern Recognition**
+****Python for Statistical Modeling & Pattern Recognition****
 
 Welcome to the Python for Statistical Modeling & Pattern Recognition repository. This repository contains Python code, examples, and supplementary materials for topics related to statistical modeling, machine learning, and pattern recognition.
 
