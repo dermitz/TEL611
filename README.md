@@ -1,8 +1,8 @@
-****Python for Statistical Modeling & Pattern Recognition****
+Python for Statistical Modeling & Pattern Recognition
 
 Welcome to the Python for Statistical Modeling & Pattern Recognition repository. This repository contains Python code, examples, and supplementary materials for topics related to statistical modeling, machine learning, and pattern recognition.
 
-**Topics Covered**
+Topics Covered
 
 1. Principal Component Analysis (PCA) 
     Implementation and visualization of PCA for dimensionality reduction.
